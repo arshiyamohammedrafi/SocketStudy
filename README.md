@@ -59,7 +59,7 @@ Socket programming finds applications in various domains, including web developm
 
 ### Server:
 
-
+```
 import socket
 from datetime import datetime
 server_socket = socket.socket()
@@ -76,10 +76,10 @@ print(f"Acknowledgment from client: {ack}")
 client_socket.close()
 server_socket.close()
 
-
+```
 ### Client:
 
-
+```
 import socket
 client_socket = socket.socket()
 client_socket.connect(('localhost', 8000))
@@ -87,7 +87,7 @@ data = client_socket.recv(1024).decode()
 print(f"Received from server: {data}")
 client_socket.send("Date and time received successfully.".encode())
 client_socket.close()
-
+```
 ## Output:
 
 ## Server:
